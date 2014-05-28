@@ -5,4 +5,4 @@ m <- matrix(1:9, ncol=3)
 m
 m[1,]
 m[1,,drop=FALSE]
-{r}
+```
