@@ -25,3 +25,19 @@ is.numeric(x) && x + 1 # evaluates left to right
 is.numeric(x) & x + 1 # produces error
 ```
 
+### sapply() and apply() return columns
+
+```{r}
+m <- matrix(1:9, ncol=3)
+m^2
+apply(m, 2, `^`, 2) # column-wise, ok
+apply(m, 1, `^`, 2) # gives back row-wise operation as columns
+```
+
+### Column names restricted characters
+
+```{r}
+df <- data.frame("test-it-#1"=1:2)
+df
+make.names("test-it-#1") # this function is used
+```

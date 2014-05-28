@@ -116,3 +116,61 @@ is.numeric(x) & x + 1 # produces error
 ## Error: non-numeric argument to binary operator
 ```
 
+### sapply() and apply() return columns
+
+
+```r
+m <- matrix(1:9, ncol=3)
+m^2
+```
+
+```
+##      [,1] [,2] [,3]
+## [1,]    1   16   49
+## [2,]    4   25   64
+## [3,]    9   36   81
+```
+
+```r
+apply(m, 2, `^`, 2) # column-wise, ok
+```
+
+```
+##      [,1] [,2] [,3]
+## [1,]    1   16   49
+## [2,]    4   25   64
+## [3,]    9   36   81
+```
+
+```r
+apply(m, 1, `^`, 2) # gives back row-wise operation as columns
+```
+
+```
+##      [,1] [,2] [,3]
+## [1,]    1    4    9
+## [2,]   16   25   36
+## [3,]   49   64   81
+```
+
+### Column names restricted characters
+
+
+```r
+df <- data.frame("test-it-#1"=1:2)
+df
+```
+
+```
+##   test.it..1
+## 1          1
+## 2          2
+```
+
+```r
+make.names("test-it-#1") # this function is used
+```
+
+```
+## [1] "test.it..1"
+```
