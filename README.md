@@ -80,6 +80,27 @@ df[,1,drop=FALSE]
 ## 3 3
 ```
 
+### stringsAsFactors: data.frame() and read.table()
+
+
+```r
+df <- data.frame(a=c("10","11","12"))
+as.numeric(df$a) + 1
+```
+
+```
+## [1] 2 3 4
+```
+
+```r
+df <- data.frame(a=c("10","11","12"), stringsAsFactors=FALSE)
+as.numeric(df$a) + 1
+```
+
+```
+## [1] 11 12 13
+```
+
 ### Logical operators
 
 
@@ -174,3 +195,36 @@ make.names("test-it-#1") # this function is used
 ```
 ## [1] "test.it..1"
 ```
+
+### Removing columns by name
+
+
+```r
+df <- data.frame(a=1:2,b=3:4,c=5:6,d=7:8)
+df[,-(2:3)] # numeric index ok 
+```
+
+```
+##   a d
+## 1 1 7
+## 2 2 8
+```
+
+```r
+df[,-c("b","c")] # not character index
+```
+
+```
+## Error: invalid argument to unary operator
+```
+
+```r
+subset(df, select=-c(b,c)) # by name works here
+```
+
+```
+##   a d
+## 1 1 7
+## 2 2 8
+```
+

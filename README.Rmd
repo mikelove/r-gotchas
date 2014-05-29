@@ -15,6 +15,15 @@ df[,1] # vector
 df[,1,drop=FALSE]
 ```
 
+### stringsAsFactors: data.frame() and read.table()
+
+```{r}
+df <- data.frame(a=c("10","11","12"))
+as.numeric(df$a) + 1
+df <- data.frame(a=c("10","11","12"), stringsAsFactors=FALSE)
+as.numeric(df$a) + 1
+```
+
 ### Logical operators
 
 ```{r}
@@ -41,3 +50,13 @@ df <- data.frame("test-it-#1"=1:2)
 df
 make.names("test-it-#1") # this function is used
 ```
+
+### Removing columns by name
+
+```{r}
+df <- data.frame(a=1:2,b=3:4,c=5:6,d=7:8)
+df[,-(2:3)] # numeric index ok 
+df[,-c("b","c")] # not character index
+subset(df, select=-c(b,c)) # by name works here
+```
+
