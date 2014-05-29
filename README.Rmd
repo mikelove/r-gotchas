@@ -3,7 +3,7 @@
 ### Dropped dimensions
 
 ```{r}
-m <- matrix(1:9, ncol=3)
+m <- matrix(1:6, ncol=3)
 m
 m[1,] # vector
 m[,1] # vector
@@ -37,7 +37,7 @@ is.numeric(x) & x + 1 # produces error
 ### sapply() and apply() return columns
 
 ```{r}
-m <- matrix(1:9, ncol=3)
+m <- matrix(1:6, ncol=3)
 m^2
 apply(m, 2, `^`, 2) # column-wise, ok
 apply(m, 1, `^`, 2) # gives back row-wise operation as columns
