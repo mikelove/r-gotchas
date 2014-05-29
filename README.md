@@ -230,3 +230,21 @@ subset(df, select=-c(b,c)) # by name works here
 ## 2 2 8
 ```
 
+### Formulas save variables in environment even if not referenced
+
+This is clear from the formula class description, but good to know in the era of large datasets.
+
+
+```r
+f <- function() {
+  y <- 1:10
+  form <- ~ 1
+  form
+}
+get("y", environment(f()))
+```
+
+```
+##  [1]  1  2  3  4  5  6  7  8  9 10
+```
+

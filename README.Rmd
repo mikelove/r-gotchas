@@ -67,3 +67,16 @@ df[,-c("b","c")] # not character index
 subset(df, select=-c(b,c)) # by name works here
 ```
 
+### Formulas save variables in environment even if not referenced
+
+This is clear from the formula class description, but good to know in the era of large datasets.
+
+```{r}
+f <- function() {
+  y <- 1:10
+  form <- ~ 1
+  form
+}
+get("y", environment(f()))
+```
+
