@@ -2,17 +2,24 @@
 
 ### Dropped dimensions
 
+For matrix:
+
 ```{r}
 m <- matrix(1:6, ncol=3)
 m
 m[1,] # vector
 m[,1] # vector
 m[1,,drop=FALSE] # matrix
+```
+
+For data.frame:
+
+```{r}
 df <- data.frame(a=1:3,b=4:6)
 df
 df[1,] # data.frame
 df[,1] # vector
-df[,1,drop=FALSE]
+df[,1,drop=FALSE] # data.frame
 ```
 
 ### stringsAsFactors: data.frame() and read.table()

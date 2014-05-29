@@ -2,6 +2,8 @@
 
 ### Dropped dimensions
 
+For matrix:
+
 
 ```r
 m <- matrix(1:6, ncol=3)
@@ -39,6 +41,9 @@ m[1,,drop=FALSE] # matrix
 ## [1,]    1    3    5
 ```
 
+For data.frame:
+
+
 ```r
 df <- data.frame(a=1:3,b=4:6)
 df
@@ -69,7 +74,7 @@ df[,1] # vector
 ```
 
 ```r
-df[,1,drop=FALSE]
+df[,1,drop=FALSE] # data.frame
 ```
 
 ```
