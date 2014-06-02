@@ -1,5 +1,10 @@
 # Some R gotchas
 
+[Here](http://stackoverflow.com/questions/1535021/whats-the-biggest-r-gotcha-youve-run-across)
+is a stackoverflow discussion with many R gotchas. Below I recreate
+those which I consider important to be aware of. Some of these are not
+a fault of the language per se, but I list them here anyway.
+
 ### Dropped dimensions
 
 For matrix:
@@ -84,7 +89,7 @@ df[,1,drop=FALSE] # data.frame
 ## 3 3
 ```
 
-### stringsAsFactors: data.frame() and read.table()
+### stringsAsFactors: data.frame and read.table
 
 
 ```r
@@ -228,6 +233,71 @@ subset(df, select=-c(b,c)) # by name works here
 ##   a d
 ## 1 1 7
 ## 2 2 8
+```
+
+### Safer to use seq_along and seq_len
+
+
+```r
+x <- numeric(0)
+1:length(x)
+```
+
+```
+## [1] 1 0
+```
+
+```r
+seq_len(length(x))
+```
+
+```
+## integer(0)
+```
+
+```r
+seq_along(x)
+```
+
+```
+## integer(0)
+```
+
+### is.na and is.null
+
+
+```r
+x <- c(1,2,NA,NULL)
+which(x == NA)
+```
+
+```
+## integer(0)
+```
+
+```r
+which(is.na(x))
+```
+
+```
+## [1] 3
+```
+
+```r
+y <- NULL
+y == NULL
+```
+
+```
+## logical(0)
+```
+
+```r
+is.null(y)
+```
+
+```
+## [1] TRUE
 ```
 
 ### Formulas save variables in environment even if not referenced
