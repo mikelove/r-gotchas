@@ -1,9 +1,11 @@
 # Some R gotchas
 
+Below I list some potentially unexpected results from R functions
+which I consider important to be aware of. Some of these are not
+a fault of the language, but I list them here anyway.
+
 [Here](http://stackoverflow.com/questions/1535021/whats-the-biggest-r-gotcha-youve-run-across)
-is a stackoverflow discussion with many R gotchas. Below I recreate
-those which I consider important to be aware of. Some of these are not
-a fault of the language per se, but I list them here anyway.
+is a stackoverflow discussion with some more. 
 
 ### Dropped dimensions
 
