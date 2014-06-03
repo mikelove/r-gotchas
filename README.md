@@ -151,7 +151,7 @@ is.numeric(x) & x + 1  # produces error
 ```
 
 
-### sapply() and apply() return columns
+### apply returns columns
 
 
 ```r
