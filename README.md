@@ -276,7 +276,7 @@ seq_along(x)
 
 
 ```r
-x <- c(1, 2, NA, NULL)
+x <- c(1, 2, NA)
 which(x == NA)
 ```
 
@@ -311,8 +311,6 @@ is.null(y)
 
 
 ### Formulas save variables in environment even if not referenced
-
-This is clear from the formula class description, but good to know in the era of large datasets.
 
 
 ```r
