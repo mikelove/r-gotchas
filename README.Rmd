@@ -6,6 +6,8 @@ which are important to be aware of.
 [Here](http://stackoverflow.com/questions/1535021/whats-the-biggest-r-gotcha-youve-run-across)
 is a stackoverflow discussion with some more. 
 
+Even more: [R programming for those coming from other languages](http://www.johndcook.com/R_language_for_programmers.html)
+
 ### Dropped dimensions
 
 For matrix:
