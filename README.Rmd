@@ -47,7 +47,7 @@ is.numeric(x) && x + 1 # evaluates left to right
 is.numeric(x) & x + 1 # produces error
 ```
 
-### sapply() and apply() return columns
+### apply returns columns
 
 ```{r}
 m <- matrix(1:6, ncol=3)
