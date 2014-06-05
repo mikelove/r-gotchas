@@ -1,11 +1,12 @@
 # Some R gotchas
 
-Below I list some potentially unexpected results from R functions
-which I consider important to be aware of. Some of these are not
-a fault of the language, but I list them here anyway.
+Some potentially surprising results from R functions
+which are important to be aware of. 
 
 [Here](http://stackoverflow.com/questions/1535021/whats-the-biggest-r-gotcha-youve-run-across)
 is a stackoverflow discussion with some more. 
+
+Even more: [R programming for those coming from other languages](http://www.johndcook.com/R_language_for_programmers.html)
 
 ### Dropped dimensions
 
@@ -148,7 +149,7 @@ is.numeric(x) & x + 1 # produces error
 ## Error: non-numeric argument to binary operator
 ```
 
-### sapply() and apply() return columns
+### apply returns columns
 
 
 ```r
@@ -269,7 +270,7 @@ seq_along(x)
 
 
 ```r
-x <- c(1,2,NA,NULL)
+x <- c(1,2,NA)
 which(x == NA)
 ```
 
@@ -330,8 +331,6 @@ read.csv("matrix.csv",row.names=1)
 
 
 ### Formulas save variables in environment even if not referenced
-
-This is clear from the formula class description, but good to know in the era of large datasets.
 
 
 ```r
