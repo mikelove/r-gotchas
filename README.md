@@ -302,6 +302,33 @@ is.null(y)
 ## [1] TRUE
 ```
 
+### write.csv and read.csv don't agree
+
+
+```r
+m <- matrix(1:4,ncol=2)
+write.csv(m,file="matrix.csv")
+read.csv("matrix.csv")
+```
+
+```
+##   X V1 V2
+## 1 1  1  3
+## 2 2  2  4
+```
+
+```r
+read.csv("matrix.csv",row.names=1)
+```
+
+```
+##   V1 V2
+## 1  1  3
+## 2  2  4
+```
+
+
+
 ### Formulas save variables in environment even if not referenced
 
 This is clear from the formula class description, but good to know in the era of large datasets.
