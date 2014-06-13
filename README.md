@@ -113,6 +113,12 @@ as.numeric(df$a) + 1
 ## [1] 11 12 13
 ```
 
+### Conventions, not so much
+
+boxplot: `names` & `horizontal`
+barplot: `names.arg` & `horiz`
+stripchart: `group.names` & `vertical`
+
 ### Logical operators
 
 

@@ -39,6 +39,12 @@ df <- data.frame(a=c("10","11","12"), stringsAsFactors=FALSE)
 as.numeric(df$a) + 1
 ```
 
+### Conventions, not so much
+
+boxplot: `names` & `horizontal`
+barplot: `names.arg` & `horiz`
+stripchart: `group.names` & `vertical`
+
 ### Logical operators
 
 ```{r}
