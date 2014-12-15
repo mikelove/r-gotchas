@@ -8,6 +8,8 @@ is a stackoverflow discussion with some more.
 
 Even more: [R programming for those coming from other languages](http://www.johndcook.com/R_language_for_programmers.html)
 
+And more: [aRrgh: a newcomer's (angry) guide to R](http://tim-smith.us/arrgh/index.html)
+
 ### Dropped dimensions
 
 For matrix:
