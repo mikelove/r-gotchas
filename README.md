@@ -123,6 +123,7 @@ stripchart: `group.names` & `vertical`
 
 ### Logical operators
 
+these are not 'gotchas' but good to remember:
 
 ```r
 c(TRUE,TRUE,FALSE) & c(FALSE,TRUE,TRUE) # element-wise
